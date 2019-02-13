@@ -10,5 +10,16 @@
 			sample_name as sampleName
 		FROM sample
 	</select>
+	
+	<select id="selectSampleOne" resultType="com.example.web02.vo.Sample">
+		SELECT sample_id as sampleId,
+			sample_name as sampleName
+		FROM sample
+		where sample_id= #{sampleId}
+	</select>
+	
+	<insert id="addSample" parameterType="com.example.web02.vo.Sample">
+		INSERT into sample(sample_name) VALUES(${sampleName})
+	</insert>
 
 </mapper>

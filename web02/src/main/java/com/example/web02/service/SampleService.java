@@ -19,4 +19,20 @@ public class SampleService {
 		
 		return list;
 	}
+	
+	public List<Sample> getSelectOne(int sampleId){
+		
+		List<Sample> list = sampleMapper.selectSampleOne(sampleId);
+		
+		return list;
+			
+	}
+	
+	public int addSample(String sampleName) {
+		int result = sampleMapper.insertSample(sampleName);
+		
+		return result;
+	}
+	
+	
 }

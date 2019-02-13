@@ -10,4 +10,7 @@ import com.example.web02.vo.Sample;
 public interface SampleMapper {
 
 	List<Sample> selectSampleList();
+	List<Sample> selectSampleOne(int sampleId);
+	int insertSample(String sampleName);
+	
 }

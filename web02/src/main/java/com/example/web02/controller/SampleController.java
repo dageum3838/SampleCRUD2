@@ -16,6 +16,7 @@ public class SampleController {
 	
 	@Autowired private SampleService sampleService;
 	
+	//전체 목록
 	@GetMapping("/sampleList")
 	 public String sampleList(Model model) {
 		 List<Sample> list = sampleService.getSelectList();
@@ -23,4 +24,14 @@ public class SampleController {
 		 
 		 return "sampleList";
 	 }
+	
+	//입력 폼
+	@GetMapping("/addSample")
+	public String addSample() {
+		
+		return "addSample";
+		
+	}
+	
+	
 }
